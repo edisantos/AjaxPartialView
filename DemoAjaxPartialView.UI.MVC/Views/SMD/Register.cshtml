@@ -1,0 +1,102 @@
+﻿@model DemoAjaxPartialView.UI.MVC.Models.Wlan
+@{
+    ViewBag.Title = "Register";
+    AjaxOptions options = new AjaxOptions
+    {
+        // Confirm = "Are you sure to save record?",
+        OnBegin = "OnBeginMethod",
+        OnFailure = "OnFailtureMethod",
+        OnSuccess = "OnSuccessMethod",
+        OnComplete = "OnCompleteMethod"
+
+    };
+}
+
+<div class="container">
+    <br /><br />
+    @using (Ajax.BeginForm(options))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <div class="form-group">
+                <label>SN</label>
+            </div>
+            <div class="form-group">
+                @Html.TextBoxFor(m => m.SN, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label>Modelo</label>
+            </div>
+            <div class="form-group">
+                @Html.TextBoxFor(m => m.Modelo, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-floppy-save"> Registrar</span>
+                </button>
+            </div>
+            <div class="form-group">
+                <label id="labelAjaxStatus" class="alert-warning"></label>
+
+            </div>
+        </div>
+    }
+</div>
+<div class="row">
+    <input id="btnAjax" name="btnAjax" type="button" value="Exibir Produtos" />
+    <div id="DivTable">
+        <div id="produtos" style="background-color:lightskyblue"></div>
+    </div>
+</div>
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+<script type="text/javascript">
+    var isError = false;
+    function OnBeginMethod() {
+        $("#labelAjaxStatus").text("Loading ....");
+    }
+
+    function OnFailtureMethod(error) {
+        $("#labelAjaxStatus").text("Sorry, an error occured." + error.responseText);
+        isError = true;
+    }
+
+    function OnSuccessMethod(data) {
+        $("#labelAjaxStatus").text("Processed the data Successfully!");
+        $("#SN").val('');
+        $("#Modelo").val('');
+
+    }
+
+    function OnCompleteMethod(data, status) {
+        if (!isError) {
+            $("#labelAjaxStatus").text("Request completed. Here is the status: " +
+                status);
+        }
+    }
+
+    
+
+</script>
+
+@section Scripts {
+    <script>
+        $('#btnAjax').click(function ajaxCall() {
+            $.ajax({
+                url: '/Home/GetMagazine',
+                contentType: 'application/html; charset=utf-8',
+                type: 'GET',
+                dataType: 'html'
+
+            })
+                .success(function (result) {
+                    $('#produtos').html(result);
+                })
+                .error(function (xhr, status) {
+                    alert(status);
+                })
+        }
+        );
+    </script>
+}

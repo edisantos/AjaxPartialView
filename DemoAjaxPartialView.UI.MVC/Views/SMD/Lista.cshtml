@@ -1,0 +1,20 @@
+﻿@model IEnumerable<DemoAjaxPartialView.UI.MVC.Models.Wlan>
+<table>
+    <thead>
+        <tr>
+            <th>Data</th>
+            <th>SN</th>
+            <th>Modelo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+        <tr>
+            <td>@item.Data</td>
+            <td>@item.SN</td>
+            <td>@item.Modelo</td>
+        </tr>
+        }
+    </tbody>
+</table>
