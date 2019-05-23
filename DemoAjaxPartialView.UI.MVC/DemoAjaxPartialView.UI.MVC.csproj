@@ -184,6 +184,7 @@
     <Content Include="Views\SMD\Index.cshtml" />
     <Content Include="Views\SMD\GetMagazine.cshtml" />
     <Content Include="Views\SMD\ListaMagazine.cshtml" />
+    <Content Include="Views\SMD\GetAllMagazine.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

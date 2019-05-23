@@ -94,5 +94,11 @@ namespace DemoAjaxPartialView.UI.MVC.Controllers
             return PartialView(res);
         }
 
+        public JsonResult GetAllMagazine()
+        {
+            var res = db.Wlan.ToList();
+            return Json(res, JsonRequestBehavior.AllowGet);
+        }
+
     }
 }
