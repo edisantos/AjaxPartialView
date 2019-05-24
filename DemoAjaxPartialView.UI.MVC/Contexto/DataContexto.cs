@@ -13,6 +13,7 @@ namespace DemoAjaxPartialView.UI.MVC.Contexto
         }
 
         public DbSet<Wlan> Wlan { get; set; }
+        public DbSet<Pedidos> Pedidos { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();

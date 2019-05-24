@@ -128,6 +128,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Contexto\DataContexto.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PedidosController.cs" />
     <Compile Include="Controllers\SMDController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -138,6 +139,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ModelDefault.cs" />
+    <Compile Include="Models\Pedidos.cs" />
     <Compile Include="Models\Wlan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -165,6 +167,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\Pedidos.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -185,6 +188,9 @@
     <Content Include="Views\SMD\GetMagazine.cshtml" />
     <Content Include="Views\SMD\ListaMagazine.cshtml" />
     <Content Include="Views\SMD\GetAllMagazine.cshtml" />
+    <Content Include="Views\Pedidos\ListarPedidos.cshtml" />
+    <Content Include="Views\Pedidos\RegistrarPedidos.cshtml" />
+    <Content Include="Views\Pedidos\ListaDados.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
