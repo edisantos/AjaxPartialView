@@ -1,6 +1,6 @@
 ﻿function SalvarPedidos() {
 
-     debugger
+     
     //Pedidos
     var produto = $("#Produto").val();
     var valor = $("#ValorUnit").val();
@@ -14,7 +14,7 @@
     headersadr['__RequestVerificationToken'] = tokenadr;
 
     //Gravar dados
-     debugger
+    
     var url = "/Pedidos/RegistrarPedidos";
     $.ajax({
         url: url,
@@ -35,7 +35,7 @@
 
     });
 }
-debugger
+
 function ListaDados(Id) {
     var url = "/Pedidos/ListaDados";
     $.aja({

@@ -86,4 +86,3 @@ F:\Estudos MVC\DemoAjaxPartalView\DemoAjaxPartialView.UI.MVC\obj\Debug\DemoAjaxP
 F:\Estudos MVC\DemoAjaxPartalView\DemoAjaxPartialView.UI.MVC\obj\Debug\DemoAjaxPartialView.UI.MVC.csproj.CopyComplete
 F:\Estudos MVC\DemoAjaxPartalView\DemoAjaxPartialView.UI.MVC\obj\Debug\DemoAjaxPartialView.UI.MVC.dll
 F:\Estudos MVC\DemoAjaxPartalView\DemoAjaxPartialView.UI.MVC\obj\Debug\DemoAjaxPartialView.UI.MVC.pdb
-F:\Estudos MVC\DemoAjaxPartalView\DemoAjaxPartialView.UI.MVC\obj\Debug\DemoAjaxPartialView.UI.MVC.csprojAssemblyReference.cache
